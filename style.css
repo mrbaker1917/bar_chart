@@ -1,0 +1,16 @@
+body {
+    background-color: #aaa;
+}
+.bar {
+    border: 1px solid maroon;
+    display: inline;
+    padding: 10px;
+    background-color: yellow;
+    flex-flow: row-reverse;
+}
+.container {
+    border: 1px solid white;
+    height: 400px;
+    display: flexbox;
+    flex-direction: row-reverse
+}
