@@ -13,10 +13,50 @@ body {
 p,h3 {
     text-align: center;
     font-size: 1.5em;
+    text-justify: distribute;
 }
 .container {
     border: 1px solid white;
     height: 500px;
     display: flex;
     align-items: flex-end;
+    margin: 15px 10px 0px 15px;
+}
+#bar1 {
+    background-color: blue;
+    height: 400px;
+}
+
+#bar2 {
+    background-color: green;
+    height: 250px;
+}
+
+#bar3 {
+    background-color: red;
+    height: 150px;
+}
+
+#bar4 {
+    background-color: yellow;
+    height: 300px;
+}
+
+.y-axis {
+    border: 1px solid white;
+    padding: 10px;
+    display: inline-block;
+    flex-direction: row;
+    height: 96%;
+}
+.rotate {
+    transform: rotate(-90deg);
+}
+.x-axis {
+    border: 1px solid white;
+    padding: 10px;
+    display: inline-block;
+    flex-direction: row;
+    width: 97%;
+    margin: 0 15px 0 15px;;
 }
