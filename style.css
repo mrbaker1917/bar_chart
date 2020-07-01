@@ -42,6 +42,11 @@ p,h3 {
     height: 300px;
 }
 
+#bar5 {
+    background-color: purple;
+    height: 450px;
+}
+
 .y-axis {
     border: 1px solid white;
     padding: 10px;
