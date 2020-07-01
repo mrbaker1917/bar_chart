@@ -1,27 +1,42 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="eng">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>bar charts</title>
-    <link href="./style.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <style>
+        .height {
+            height: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".bar").addClass("height")
+        });
+    </script>
 </head>
 
 <body>
-    <script>
-        $(document).ready(function () {
-            $("body").addClass("animated hinge");
-        });
-    </script>
-    <div class="container">
+    <div class="header">
         <h3 class="title_head">Make your own bar charts</h3>
-        <div class="bar" id="bar1">1</div>
-        <div class="bar" id="bar2">2</div>
-        <div class="bar" id="bar3">3</div>
-        <div class="bar" id="bar4">4</div>
+    </div>
+    <div class="container">
+        <div class="bar" id="bar1">
+            <p>1</p>
+        </div>
+        <div class="bar" id="bar2">
+            <p>2</p>
+        </div>
+        <div class="bar" id="bar3">
+            <p>3</p>
+        </div>
+        <div class="bar" id="bar4">
+            <p>4</p>
+        </div>
     </div>
 </body>
 
