@@ -7,7 +7,6 @@ body {
     padding: 10px;
     background-color: rgb(142, 35, 35);
     margin: 0 auto;
-    width: 100px;
     color: white;
 }
 p,h3 {
@@ -44,14 +43,13 @@ p,h3 {
 
 #bar5 {
     background-color: purple;
-    height: 450px;
 }
 
 .y-axis {
     border: 1px solid white;
-    padding: 10px;
+    padding-top: 20px;
     display: inline-block;
-    flex-direction: row;
+    flex-direction: row-reverse;
     height: 96%;
 }
 .rotate {
