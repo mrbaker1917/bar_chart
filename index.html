@@ -17,79 +17,86 @@
 
 <body>
     <div class="header">
-        <h3 class="title_head">Make your own Bar Charts!</h3>
+        <h1 class="title_head">Make Your OWN Bar Charts!</h1>
     </div>
     <div class="container">
         <div class="y-axis">
             <h3 class="rotate">Y-AXIS</h3>
         </div>
         <div class="bar" id="bar1">
-            <p>1</p>
+            <p>5</p>
         </div>
         <div class="bar" id="bar2">
-            <p>2</p>
+            <p>3</p>
         </div>
         <div class="bar" id="bar3">
-            <p>3</p>
+            <p>2</p>
         </div>
         <div class="bar" id="bar4">
             <p>4</p>
         </div>
         <div class="bar" id="bar5">
-            <p>5</p>
+            <p>1</p>
         </div>
         <div class="bar" id="bar1">
-            <p>1</p>
+            <p>5</p>
         </div>
         <div class="bar" id="bar2">
-            <p>2</p>
+            <p>3</p>
         </div>
         <div class="bar" id="bar3">
-            <p>3</p>
+            <p>2</p>
         </div>
         <div class="bar" id="bar4">
             <p>4</p>
         </div>
         <div class="bar" id="bar5">
-            <p>5</p>
+            <p>1</p>
         </div>
         <div class="bar" id="bar1">
-            <p>1</p>
+            <p>5</p>
         </div>
         <div class="bar" id="bar2">
-            <p>2</p>
+            <p>3</p>
         </div>
         <div class="bar" id="bar3">
-            <p>3</p>
+            <p>2</p>
         </div>
         <div class="bar" id="bar4">
             <p>4</p>
         </div>
         <div class="bar" id="bar5">
-            <p>5</p>
+            <p>1</p>
         </div>
         <div class="bar" id="bar1">
-            <p>1</p>
+            <p>5</p>
         </div>
         <div class="bar" id="bar2">
-            <p>2</p>
+            <p>3</p>
         </div>
         <div class="bar" id="bar3">
-            <p>3</p>
+            <p>2</p>
         </div>
         <div class="bar" id="bar4">
             <p>4</p>
         </div>
         <div class="bar" id="bar5">
-            <p>5</p>
+            <p>1</p>
         </div>
+
     </div>
     <div class="x-axis">
         <h3>X-AXIS</h3>
     </div>
+    <footer>
+        <a href="https://mrbaker1917.com/editor/">My Website</a>
+    </footer>
     <script>
         $(document).ready(function () {
-            $(".bar").addClass("height")
+            $("div.bar").slideDown(3000, function () {
+                $(this).animate({ width: "100%" }, 3000);
+            });
+            $("h1").delay(3000).fadeIn(3000);
         });
     </script>
 </body>
