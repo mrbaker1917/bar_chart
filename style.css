@@ -10,8 +10,8 @@ body {
     margin: 0 auto;
     color: white;
     display: none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 p,h3 {
@@ -27,11 +27,13 @@ h1 {
 
 a {
     text-decoration: none;
-    font-size: 1.5em;
 }
 a:hover {
     font-weight: 900;
     color: maroon;
+    border-radius: 5px;
+    background-color: beige;
+    padding: 5px;
 }
 
 .container {
@@ -81,7 +83,7 @@ a:hover {
     display: inline-block;
     flex-direction: row;
     width: 97%;
-    margin: 0 15px 0 15px;
+    margin: 0 15px 15px 15px;
 }
 
 footer {
@@ -89,5 +91,5 @@ footer {
     border: 1px solid beige;
     padding: 10px;
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
 }
