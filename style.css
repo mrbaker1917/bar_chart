@@ -25,6 +25,15 @@ h1 {
     font-size: 3.0em;
 }
 
+ul, li {
+    list-style: none;
+    text-align: right;
+    font-weight: bold;
+    color: beige;
+    margin: 0;
+    margin-right: -5px;
+}
+
 a {
     text-decoration: none;
 }
@@ -69,14 +78,13 @@ a:hover {
 
 .y-axis {
     border: 1px solid beige;
-    /* margin: 0; */
     padding: 10px;
     display: inline-block;
     height: 96%;
 }
-.rotate {
+/* .rotate {
     transform: rotate(-90deg);
-}
+}*/
 .x-axis {
     border: 1px solid beige;
     padding: 10px;
