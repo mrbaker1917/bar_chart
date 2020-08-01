@@ -4,6 +4,11 @@ body {
     align-items: center;
     justify-items: center;
 }
+.header {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+}
 .bar {
     padding: 10px;
     background-color: rgb(142, 35, 35);
@@ -23,6 +28,7 @@ h1 {
     display: none;
     text-align: center;
     font-size: 3.0em;
+    color: #aaa;
 }
 
 ul, li {
@@ -33,7 +39,18 @@ ul, li {
     margin: 0;
     margin-right: -5px;
 }
-
+button {
+    background-color: maroon;
+    color: beige;
+    padding: 10px;
+    border-radius: 5px;
+}
+#greeting {
+    background-color: maroon;
+    color: #aaa;
+    padding: 10px;
+    border-radius: 5px;
+}
 a {
     text-decoration: none;
 }
@@ -52,7 +69,7 @@ a:hover {
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
 }
-#bar1 {
+.bar1 {
     background-color: blue;
     height: 400px;
 }

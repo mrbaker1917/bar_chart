@@ -9,55 +9,48 @@
     <script src="bar_charts.js"></script>
     <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
     <link href="./style.css" rel="stylesheet" type="text/css" />
-    <style>
-        .height {
-            height: 100px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="header">
-        <h1 class="title_head">Make Your OWN Bar Charts!</h1>
+        <h1 class="title_head" id="greeting">Make Your OWN Bar Charts!</h1>
     </div>
     <div class="container">
         <div class="y-axis">
             <ul>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
-                <li>__</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
+                <li>____</li>
             </ul>
             <h3 class="rotate">Y_AXIS</h3>
         </div>
-        <div class="bar" id="bar1">
+        <div class="bar bar1">
             <p>5</p>
         </div>
         <div class="bar" id="bar2">
@@ -72,7 +65,7 @@
         <div class="bar" id="bar5">
             <p>1</p>
         </div>
-        <div class="bar" id="bar1">
+        <div class="bar bar1">
             <p>5</p>
         </div>
         <div class="bar" id="bar2">
@@ -87,7 +80,7 @@
         <div class="bar" id="bar5">
             <p>1</p>
         </div>
-        <div class="bar" id="bar1">
+        <div class="bar bar1">
             <p>5</p>
         </div>
         <div class="bar" id="bar2">
@@ -102,7 +95,7 @@
         <div class="bar" id="bar5">
             <p>1</p>
         </div>
-        <div class="bar" id="bar1">
+        <div class="bar bar1">
             <p>5</p>
         </div>
         <div class="bar" id="bar2">
@@ -120,7 +113,12 @@
 
     </div>
     <div class="x-axis">
-        <h3>X-AXIS</h3>
+        <h3>X_AXIS</h3>
+        <button type="button" onclick="document.getElementById('greeting').innerHTML = 'Hello There!'">Click
+            me!</button>
+        <button type="button"
+            onclick="document.getElementById('greeting').innerHTML = 'Make Your OWN Bar Charts!'">Click back!</button>
+        <button type="button" onclick="changeBarHeight()">Click bar up!</button>
     </div>
     <footer>
         <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">mrbaker1917</a>
