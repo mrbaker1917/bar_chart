@@ -12,6 +12,14 @@ function drawBarChart(data, options) {
     return arr;
 };
 
+function makeTicks(str) {
+    let li = document.createElement('li');
+    li.innerText = str;
+    return li;
+}
+
+
+
 // function changeBarHeight() {
 //     let h = '450px';
 //     let h2 = '350px';

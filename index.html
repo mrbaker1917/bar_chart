@@ -9,6 +9,7 @@
     <script src="bar_charts.js"></script>
     <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
     <link href="./style.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -17,36 +18,8 @@
     </div>
     <div class="container">
         <div class="y-axis">
-            <ul>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
-                <li>____</li>
+            <ul id="ticks">
+
             </ul>
             <h3 class="rotate">Y_AXIS</h3>
         </div>
@@ -118,7 +91,9 @@
             me!</button>
         <button type="button"
             onclick="document.getElementById('greeting').innerHTML = 'Make Your OWN Bar Charts!'">Click back!</button>
-        <button type="button" onclick="console.log(drawBarChart([4, 1, 3, 2, 5], {height: '500px', width: '100%'}))">Click bar up!</button>
+        <button type="button"
+            onclick="console.log(drawBarChart([4, 1, 3, 2, 5], {height: '500px', width: '100%'}))">Click bar
+            up!</button>
     </div>
     <footer>
         <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">mrbaker1917</a>
@@ -130,6 +105,13 @@
             });
             $("h1").delay(3000).fadeIn(3000);
         });
+    </script>
+    <script>
+        const ticks = document.getElementById('#ticks');
+        ticks.appendChild(makeTicks("aa"));
+        // for (let i = 0; i < 20; i++) {
+        //     ticks.appendChild(makeTicks("aa"));
+        // }
     </script>
 </body>
 
