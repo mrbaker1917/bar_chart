@@ -11,12 +11,15 @@ body {
 }
 .bar {
     padding: 10px;
+    /* border: 1px solid white; */
     background-color: rgb(142, 35, 35);
-    margin: 0 auto;
+    margin: 0 2px;
     color: white;
-    display: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    text-align: center;
+    font-family: monospace;
+    display: none;
 }
 
 p,h3 {
@@ -68,6 +71,12 @@ a:hover {
     display: flex;
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
+}
+#barchart {
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
 }
 #bar1 {
     background-color: blue;

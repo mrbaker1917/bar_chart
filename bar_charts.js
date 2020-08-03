@@ -1,33 +1,39 @@
+
 function drawBarChart(data, options) {
     // element = document.getElementsByClassName("container");
     let chartHeight = options.height;
     let chartWidth = options.width;
     let arr = [];
+    let randColor = "";
     for (let i of data) {
-        let id = 'bar' + String(i);
-        let h = String(i*90) + "px";
-        arr.push(document.getElementById(id).style.height=h);
-        arr.push(document.getElementById(id).innerHTML=String(i));
+        randColor = Math.floor(Math.random() * 16777215).toString(16);
+        let h = String((i * 90).toFixed(2))+ "px";
+        let bar = document.createElement('div');
+        bar.style.height = h;
+        bar.className = "bar";
+        bar.innerHTML = String((i*90).toFixed(2));
+        bar.style.backgroundColor = "#" + randColor;
+        arr.push(document.getElementById('barchart').append(bar));
     }
     return arr;
 };
 
 function makeTicks(str) {
     let li = document.createElement('li');
-    li.innerText = str;
+    li.textContent = str;
     return li;
 }
 
+function makeRandArr(num) {
+    let arr1 = [];
+    let i = 0;
+    while (i < num) {
+        randNum = (Math.random() * 5).toFixed(2);
+        arr1.push(randNum)
+        i++;
+    }
+    return arr1;
+}
 
-
-// function changeBarHeight() {
-//     let h = '450px';
-//     let h2 = '350px';
-//     let heightRaise = document.getElementById('bar1').style.height=h;
-//     let colorChange = document.getElementById('bar2').style.height=h2;
-//     let numChange = document.getElementById('bar3').innerHTML='Biggest Bar Ever!';
-//     let array = [heightRaise, colorChange, numChange];
-//     return array;
-// };
-
-// console.log(drawBarChart([5,3,2,4,1], {height: 500, width: "100%"} ))
+let newArr = makeRandArr(10);
+console.log(newArr)
