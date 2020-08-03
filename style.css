@@ -10,10 +10,8 @@ body {
     width: 90%;
 }
 .bar {
-    padding: 10px;
-    /* border: 1px solid white; */
-    background-color: rgb(142, 35, 35);
-    margin: 0 2px;
+    padding: 5px;
+    border: 1px solid beige;
     color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -67,7 +65,7 @@ a:hover {
 
 .container {
     border: 1px solid white;
-    height: 500px;
+    height: 600px;
     display: flex;
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
