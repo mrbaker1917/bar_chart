@@ -11,7 +11,7 @@ function drawBarChart(data, options) {
         let bar = document.createElement('div');
         bar.style.height = h;
         bar.className = "bar";
-        bar.innerHTML = String((i*90).toFixed(0));
+        bar.innerHTML = String((i*95).toFixed(0));
         bar.style.backgroundColor = "#" + randColor;
         arr.push(document.getElementById('barchart').append(bar));
     }
