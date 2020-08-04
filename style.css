@@ -67,7 +67,7 @@ a:hover {
 
 .container {
     border: 1px solid white;
-    height: 500px;
+    height: 501px;
     display: flex;
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
