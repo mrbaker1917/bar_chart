@@ -1,6 +1,6 @@
 
-function drawBarChart(data, options) {
-    // element = document.getElementsByClassName("container");
+function drawBarChart(data, options, element) {
+    element = document.getElementById("barchart");
     let chartHeight = options.height;
     let chartWidth = options.width;
     let arr = [];
@@ -13,7 +13,7 @@ function drawBarChart(data, options) {
         bar.className = "bar";
         bar.innerHTML = String((i*95).toFixed(0));
         bar.style.backgroundColor = "#" + randColor;
-        arr.push(document.getElementById('barchart').append(bar));
+        arr.push(element.append(bar));
     }
     return arr;
 };
@@ -34,6 +34,3 @@ function makeRandArr(num) {
     }
     return arr1;
 }
-
-let newArr = makeRandArr(10);
-console.log(newArr)
