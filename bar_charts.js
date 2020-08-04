@@ -2,6 +2,7 @@
 function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = options.height;
+  element.style.height = chartHeight;
   let chartWidth = options.width;
   let arr = [];
   let randColor = "";

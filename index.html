@@ -39,8 +39,8 @@
     for (let i = 0; i < 28; i++) {
       ticks.append(makeTicks("__"));
     };
-    let data = makeRandArr(35);
-    drawBarChart(data, { height: 500, width: '100%' });
+    let data = makeRandArr(30);
+    drawBarChart(data, { height: 500, width: '100%' }, element="barchart");
 
     $(document).ready(function () {
       $("div.bar").slideDown(3000, function () {
