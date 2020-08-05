@@ -8,14 +8,16 @@ function drawBarChart(data, options, element) {
   let randColor = "";
   for (let i of data) {
     randColor = Math.floor(Math.random() * 16777215).toString(16);
-    let h = String((i * 90).toFixed(2)) + "px";
+    let h = String((i * 100)) + "px";
     let bar = document.createElement('div');
     bar.style.height = h;
     bar.className = "bar";
-    bar.innerHTML = String((i * 95).toFixed(0));
+    bar.innerHTML = String((i * 100).toFixed(0));
     bar.style.backgroundColor = "#" + randColor;
+    console.log(bar)
     arr.push(element.append(bar));
   }
+  console.log(arr);
   return arr;
 };
 
@@ -35,3 +37,16 @@ function makeRandArr(num) {
   }
   return arr1;
 }
+
+
+$(function () {
+  $("h1").delay(3000).fadeIn(3000);
+  $("#btn1").click(function () {
+    let data = $("#array").val().split(",");
+    console.log(data);
+    drawBarChart(data, { height: 500, width: '100%' });
+    $("div.bar").slideDown(3000, function () {
+      $(this).animate({ width: "100%" }, 6000);
+    })
+  })
+});

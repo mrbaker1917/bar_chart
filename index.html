@@ -2,54 +2,51 @@
 <html lang="eng">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>bar charts</title>
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="bar_charts.js"></script>
-  <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
-  <link href="./style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bar charts</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="bar_charts.js"></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-  <div class="header">
-    <h1 class="title_head" id="greeting">Make Your OWN Bar Charts!</h1>
-  </div>
-
-  <div class="container">
-    <div class="y-axis">
-      <ul id="ticks">
-        <li>500</li>
-      </ul>
-      <h3>Y_AXIS</h3>
+    <div class="header">
+        <h1 class="title_head" id="greeting">Make Your OWN Bar Charts!</h1>
     </div>
-    <div id="barchart">
+
+    <div class="container">
+        <div class="y-axis">
+            <ul id="ticks">
+                <li>500</li>
+            </ul>
+            <h3>Y_AXIS</h3>
+        </div>
+        <div id="barchart">
+        </div>
     </div>
-  </div>
-  <div class="x-axis">
-    <h3>X_AXIS</h3>
-  </div>
-  <footer>
-    <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">Designed by
-      mrbaker1917</a>
-  </footer>
-  <script>
-    const ticks = document.getElementById('ticks');
-    for (let i = 0; i < 28; i++) {
-      ticks.append(makeTicks("__"));
-    };
-    let data = makeRandArr(30);
-    drawBarChart(data, { height: 500, width: '100%' }, element="barchart");
-
-    $(document).ready(function () {
-      $("div.bar").slideDown(3000, function () {
-        $(this).animate({ width: "100%" }, 6000);
-      });
-      $("h1").delay(3000).fadeIn(3000);
-    });
-
-  </script>
+    <div class="x-axis">
+        <h3>X_AXIS</h3>
+    </div>
+    <div id="valsForm">
+        <p>Enter values for your bars, separated by commas: <input type="text" id="array" value="1, 2, 3, 4, 5" name="array"></p>
+        <button id="btn1">submit your values</button>
+    </div>
+    <footer>
+        <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">Designed by
+            mrbaker1917</a>
+    </footer>
+    <script>
+        const ticks = document.getElementById('ticks');
+        for (let i = 0; i < 28; i++) {
+            ticks.append(makeTicks("___"));
+        };
+        // let data = makeRandArr(40);
+        // console.log(data)
+        // drawBarChart(data, { height: 500, width: '100%' });
+    </script>
 </body>
 
 </html>

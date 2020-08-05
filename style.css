@@ -18,7 +18,7 @@ body {
     border-top-right-radius: 3px;
     text-align: center;
     font-family: monospace;
-    display: none;
+    /* display: none; */
 }
 
 p,h3 {
@@ -41,11 +41,18 @@ ul, li {
     margin: 0;
     margin-right: -5px;
 }
+#valsForm {
+    align-items: center;
+    display: flex;
+}
 button {
     background-color: maroon;
     color: beige;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 150px;
 }
 #greeting {
     background-color: maroon;
