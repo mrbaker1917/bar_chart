@@ -3,6 +3,7 @@ function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = options.height;
   element.style.height = chartHeight;
+  element.innerHTML = "";
   let h1 = Math.max(...data) * 1.1;
   let top = document.getElementById("top");
   top.innerText = "MaxValue:" + String((h1*1.1).toFixed());

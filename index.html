@@ -33,8 +33,7 @@
     <div id="valsForm">
         <p>*Enter values for your bars, separated by commas: <input type="text" id="array" onfocus="this.value=''" value="1, 2, 3, 4, 5" name="array"></p>
         <button id="btn1">submit your values</button>
-        <p>*If you want to add bars to same chart, just enter and submit more numbers.</p>
-        <p>*To start a new chart, please refresh the page.</p>
+        <p>*To start a new chart, enter new values.</p>
     </div>
     <footer>
         <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">Designed by
@@ -45,9 +44,9 @@
         for (let i = 0; i < 28; i++) {
             ticks.append(makeTicks("___"));
         };
-        // let data = makeRandArr(40);
-        // console.log(data)
-        // drawBarChart(data, { height: 500, width: '100%' });
+        let data = makeRandArr(30);
+        console.log(data)
+        drawBarChart(data, { height: 500, width: '100%' });
     </script>
 </body>
 
