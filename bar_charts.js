@@ -5,7 +5,7 @@ function drawBarChart(data, options, element) {
   element.style.height = chartHeight;
   let h1 = Math.max(...data) * 1.1;
   let top = document.getElementById("top");
-  top.innerText = String((h1*1.1).toFixed());
+  top.innerText = "MaxValue:" + String((h1*1.1).toFixed());
   let arr = [];
   let randColor = "";
   for (let i of data) {
