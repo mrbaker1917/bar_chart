@@ -82,6 +82,7 @@ a:hover {
     display: flex;
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
+    width: 98%;
 }
 #barchart {
     height: 500px;
@@ -95,9 +96,9 @@ a:hover {
     display: inline-flex;
     flex-direction: row;
     align-content: center;
-    margin: 15px;
+    margin: 15px 10px 0 15px;
     padding: 5px;
-    width: 98%;
+    width: 97%;
 }
 
 .y-axis {
@@ -109,8 +110,7 @@ a:hover {
 .x-axis {
     border: 1px solid white;
     width: 98%;
-    margin: 0 15px;
-    padding: 5px;
+    margin: 0px 10px 0px 15px;
 }
 
 footer {
