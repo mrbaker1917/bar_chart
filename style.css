@@ -37,6 +37,7 @@ p {
     padding: 5px;
     font-weight: 800;
     margin: 3px;
+    font-size: large;
 }
 
 ul, li {
@@ -94,9 +95,8 @@ a:hover {
 #valsForm {
     border: 1px solid white;
     display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-    margin: 15px 10px 0 15px;
+    justify-content: center;
+    margin: 15px 10px 10px 15px;
     padding: 5px;
     width: 97%;
 }
