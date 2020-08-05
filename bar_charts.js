@@ -40,7 +40,7 @@ function makeRandArr(num) {
 
 
 $(function () {
-  $("h1").delay(3000).fadeIn(3000);
+  $("h1").fadeIn(3000);
   $("#btn1").click(function () {
     let data = $("#array").val().split(",");
     drawBarChart(data, { height: 500, width: '100%' });
