@@ -13,11 +13,12 @@ body {
     padding: 2px;
     margin: 0 1px;
     border: 1px solid beige;
-    color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     text-align: center;
     font-family: monospace;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
@@ -107,6 +108,14 @@ a:hover {
     display: inline;
 }
 
+.rotate {
+    transform: rotate(270deg);
+    transform-origin: 0 0;
+    position: relative;
+    bottom: 150px;
+    left: 30px;
+}
+
 .x-axis {
     border: 1px solid white;
     width: 98%;
@@ -120,4 +129,8 @@ footer {
     margin: auto;
     background-color: maroon;
     border-radius: 5px;
+}
+h6 {
+    font-size: small;
+
 }
