@@ -47,7 +47,7 @@ $(function () {
   drawBarChart(data, { height: 500, width: '100%' });
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
-  })
+  });
   $("#btn1").click(function () {
     let data = $("#array").val().split(",");
     drawBarChart(data, { height: 500, width: '100%' });

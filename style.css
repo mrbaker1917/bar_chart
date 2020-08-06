@@ -2,7 +2,7 @@ body {
     background-color: #aaa;
     font-family: monospace;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
 .header {
     text-align: center;
