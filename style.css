@@ -11,7 +11,7 @@ body {
 }
 .bar {
     padding: 2px;
-    margin: 0 1px;
+    margin-right: 1px;
     border: 1px solid beige;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;

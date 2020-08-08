@@ -3,6 +3,7 @@ function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = options.height;
   element.style.height = chartHeight;
+  let barMargin = options.barMargin;
   element.innerHTML = "";
   let h1 = Math.max(...data) * 1.1;
   let top = document.getElementById("top");
@@ -14,6 +15,7 @@ function drawBarChart(data, options, element) {
     let h = String((i / h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
     bar.style.height = h;
+    bar.style.marginRight = barMargin;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + i + "</h6>";
     bar.style.backgroundColor = "#" + randColor;
@@ -44,14 +46,16 @@ $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
   console.log(data)
-  drawBarChart(data, { height: 500, width: '100%' });
+  let options = {height: '500', width: '100%', barMargin: '1px'};
+  drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
   });
   $("button#btn1").click(function () {
     let data = $("input#array").val().split(",");
     let chartHeight = $("input#chartHeight").val();
-    let options = {height: chartHeight, width: '100%'};
+    let barMargin = $("input#barMargin").val();
+    let options = {height: chartHeight, width: '100%', barMargin: barMargin};
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
       $(this).animate({ width: "100%" }, 6000);
