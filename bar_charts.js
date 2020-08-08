@@ -50,7 +50,9 @@ $(function () {
   });
   $("button#btn1").click(function () {
     let data = $("input#array").val().split(",");
-    drawBarChart(data, { height: 500, width: '100%' });
+    let chartHeight = $("input#chartHeight").val();
+    let options = {height: chartHeight, width: '100%'};
+    drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
       $(this).animate({ width: "100%" }, 6000);
     })
