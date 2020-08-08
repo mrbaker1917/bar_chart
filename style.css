@@ -33,7 +33,7 @@ h1 {
     color: #aaa;
 }
 
-p {
+#valueInput {
     border: 1px dotted beige;
     padding: 5px;
     font-weight: 800;
@@ -41,13 +41,23 @@ p {
     font-size: large;
 }
 
-ul, li {
+#ticks {
     list-style: none;
     text-align: right;
     font-weight: bold;
     color: beige;
     margin: 0;
     margin-right: -5px;
+}
+#optionsUl {
+  border: 1px dotted beige;
+  padding: 5px;
+  list-style: "> ";
+  text-align: left;
+  font-weight: bold;
+  color: beige;
+  margin: 0;
+  margin-left: 10px;
 }
 
 #btn1 {
@@ -95,7 +105,7 @@ a:hover {
 
 #valsForm {
     border: 1px solid white;
-    display: inline-flex;
+    /* display: inline-flex; */
     justify-content: center;
     margin: 15px 10px 10px 15px;
     padding: 5px;

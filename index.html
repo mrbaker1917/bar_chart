@@ -2,49 +2,68 @@
 <html lang="eng">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bar charts</title>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="bar_charts.js"></script>
-    <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
-    <link href="./style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bar charts</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="bar_charts.js"></script>
+  <link rel="shortcut icon" href="./favicon.ico" type="x-icon" />
+  <link href="./style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-    <div class="header">
-        <h1 class="title_head">Make Your OWN Bar Charts!</h1>
-    </div>
+  <div class="header">
+    <h1 class="title_head">Make Your OWN Bar Charts!</h1>
+  </div>
 
-    <div class="container">
-        <div class="y-axis">
-            <ul id="ticks">
-                <li id="top">MaxHite:500px</li>
-            </ul>
-            <h3 class="rotate">Y_AXIS</h3>
-        </div>
-        <div id="barchart">
-        </div>
+  <div class="container">
+    <div class="y-axis">
+      <ul id="ticks">
+        <li id="top">MaxHite:500px</li>
+      </ul>
+      <h3 class="rotate">Y_AXIS</h3>
     </div>
-    <div class="x-axis">
-        <h3>X_AXIS Label</h3>
+    <div id="barchart">
     </div>
-    <div id="valsForm">
-        <p>Enter values for your bars, separated by commas: <input type="text" id="array" onfocus="this.value=''" value="1, 2, 3, 4, 5" name="array"></p>
-        <button id="btn1">submit your values</button>
-        <p>*To create a new chart, enter new values and submit.</p>
+  </div>
+  <div class="x-axis">
+    <h3>X_AXIS Label</h3>
+  </div>
+  <div id="valsForm">
+    <p id="valueInput">Enter values for your bars, separated by commas: <input type="text" id="array" onfocus="this.value=''"
+        value="1, 2, 3, 4, 5" name="array"></p>
+    <div>
+      <p>If you do not want the default chart values, you can enter chart options below:</p>
+      <ul id="optionsUl">
+        <li><label>Chart Height (in px):
+            <input type="text" id="chartHeight" value="500px" onfocus="this.value=''" name="chartHeight">
+          </label>
+        </li>
+        <li>
+          <label>If you want to choose specific colors for bars, enter the colors here:
+            <input type="text" name="colors" id="colors" value="red, blue, pink, fucia" onfocus="this.value=''" name="colors">
+          </label>
+        </li>
+        <li>
+          <label>Bar spacing (space between bars in px):
+            <input type="text" id="barMargin" value="1px" onfocus="this.value=''" name="barMargin">
+          </label>
+        </li>
+      </ul>
     </div>
-    <footer>
-        <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">Designed by
-            mrbaker1917</a>
-    </footer>
-    <script>
-        const ticks = document.getElementById('ticks');
-        for (let i = 0; i < 28; i++) {
-            ticks.append(makeTicks("___"));
-        };
-    </script>
+    <button id="btn1">submit your values</button>
+  </div>
+  <footer>
+    <a href="https://mrbaker1917.com/editor/" target="_blank" title="Click to go my website!">Designed by
+      mrbaker1917</a>
+  </footer>
+  <script>
+    const ticks = document.getElementById('ticks');
+    for (let i = 0; i < 28; i++) {
+      ticks.append(makeTicks("___"));
+    };
+  </script>
 </body>
 
 </html>
