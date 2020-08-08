@@ -56,8 +56,11 @@ h1 {
   text-align: left;
   font-weight: bold;
   color: beige;
-  margin: 0;
-  margin-left: 10px;
+  margin-left: 20px;
+}
+input {
+  font-family: monospace;
+  border-radius: 3px;
 }
 
 #btn1 {
