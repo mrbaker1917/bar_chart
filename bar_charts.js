@@ -5,6 +5,7 @@ function drawBarChart(data, options, element) {
   element.style.height = chartHeight;
   let barMargin = options.barMargin;
   element.innerHTML = "";
+  element.style.color = options.dataColor;
   let h1 = Math.max(...data) * 1.1;
   let colors = options.colors;
   let top = document.getElementById("top");
@@ -88,13 +89,15 @@ $(function () {
     colors = colors.map(i => i.trim());
     let x_axis_label = $("input#x_axis").val();
     let y_axis_label = $("input#y_axis").val();
+    let dataColor = $("input#dataColor").val();
     let options = {
       height: chartHeight,
       width: '100%',
       barMargin: barMargin,
       colors: colors,
       x_axis_label: x_axis_label,
-      y_axis_label: y_axis_label
+      y_axis_label: y_axis_label,
+      dataColor: dataColor
     };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
