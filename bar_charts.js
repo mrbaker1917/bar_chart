@@ -29,7 +29,17 @@ function drawBarChart(data, options, element) {
   return arr;
 };
 
-const randColor = () => { return "#" + Math.floor(Math.random() * 16777215).toString(16) };
+const randColor = () => {
+  const usedColors = [];
+  let newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  if (usedColors.indexOf(newColor) !== -1) {
+    newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  } else {
+    usedColors.push(newColor);
+    return newColor;
+  }
+  console.log(usedColors)
+};
 
 function makeTicks(str) {
   let li = document.createElement('li');
