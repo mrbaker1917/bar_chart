@@ -76,7 +76,7 @@ function makeRandArr(num) {
 $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
-  let options = { height: '500', width: '100%', barMargin: '1px', colors: ['maroon'] };
+  let options = { height: '500', width: '100%', barMargin: '1px', colors: [] };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
