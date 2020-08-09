@@ -22,13 +22,13 @@
       <ul id="ticks">
         <li id="top">MaxHite:500px</li>
       </ul>
-      <h3 class="rotate">Y_AXIS</h3>
+      <h3 class="rotate" id="y_axis">Y_AXIS</h3>
     </div>
     <div id="barchart">
     </div>
   </div>
   <div class="x-axis">
-    <h3>X_AXIS Label</h3>
+    <h3 id="x_axis">X_AXIS Label</h3>
   </div>
   <div id="valsForm">
     <p id="valueInput">Enter values for your bars, separated by commas: <input type="text" id="array" onfocus="this.value=''"
@@ -44,10 +44,20 @@
           <label>If you want to choose specific colors for bars, enter the colors here:
             <input type="text" name="colors" id="colors" value="" onfocus="this.value=''" name="colors">
           </label>
-        </li>
+        </iv>
         <li>
           <label>Bar spacing (space between bars in px):
             <input type="text" id="barMargin" value="1px" onfocus="this.value=''" name="barMargin">
+          </label>
+        </li>
+        <li>
+          <label>X-Axis Label:
+            <input type="text" id="x_axis" value="x-axis" onfocus="this.value=''" name="x_axis">
+          </label>
+        </li>
+        <li>
+          <label>Y-Axis Label:
+            <input type="text" id="y_axis" value="y-axis" onfocus="this.value=''" name="y_axis">
           </label>
         </li>
       </ul>

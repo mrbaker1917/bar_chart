@@ -7,10 +7,11 @@ function drawBarChart(data, options, element) {
   element.innerHTML = "";
   let h1 = Math.max(...data) * 1.1;
   let colors = options.colors;
-  console.log(colors)
   let top = document.getElementById("top");
   top.innerText = "MaxValue:" + String((h1 * 1.1).toFixed());
   let arr = [];
+  $("h3#x_axis").text(options.x_axis_label);
+  $("h3#y_axis").text(options.y_axis_label);
   for (let i of data) {
     let h = String((i / h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
@@ -51,7 +52,6 @@ function makeRandArr(num) {
 $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
-  console.log(data)
   let options = { height: '500', width: '100%', barMargin: '1px', colors: ['maroon'] };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
@@ -63,8 +63,9 @@ $(function () {
     let barMargin = $("input#barMargin").val();
     let colors = $("input#colors").val().split(",");
     colors = colors.map(i => i.trim());
-    console.log(colors[0] == "");
-    let options = { height: chartHeight, width: '100%', barMargin: barMargin, colors: colors };
+    let x_axis_label = $("input#x_axis").val();
+    let y_axis_label = $("input#y_axis").val();
+    let options = { height: chartHeight, width: '100%', barMargin: barMargin, colors: colors, x_axis_label: x_axis_label, y_axis_label: y_axis_label };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
       $(this).animate({ width: "100%" }, 6000);
