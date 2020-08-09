@@ -33,7 +33,6 @@ const randColor = () => {
   let newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   if (usedColors.indexOf(newColor) !== -1) {
     newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    return newColor;
   } else {
     usedColors.push(newColor);
     return newColor;
@@ -89,7 +88,13 @@ $(function () {
     colors = colors.map(i => i.trim());
     let x_axis_label = $("input#x_axis").val();
     let y_axis_label = $("input#y_axis").val();
-    let options = { height: chartHeight, width: '100%', barMargin: barMargin, colors: colors, x_axis_label: x_axis_label, y_axis_label: y_axis_label };
+    let options = { 
+      height: chartHeight, 
+      width: '100%', 
+      barMargin: barMargin, 
+      colors: colors, 
+      x_axis_label: x_axis_label, 
+      y_axis_label: y_axis_label };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
       $(this).animate({ width: "100%" }, 6000);
