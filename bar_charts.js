@@ -18,7 +18,7 @@ function drawBarChart(data, options, element) {
     bar.style.marginRight = barMargin;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + i + "</h6>";
-    if (colors[0] == "") {
+    if (colors.length < 2) {
       bar.style.backgroundColor = randColor();
     } else {
       bar.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
@@ -52,7 +52,7 @@ $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
   console.log(data)
-  let options = { height: '500', width: '100%', barMargin: '1px', colors: randColor() };
+  let options = { height: '500', width: '100%', barMargin: '1px', colors: ['maroon'] };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
