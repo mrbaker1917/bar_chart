@@ -21,14 +21,14 @@ function drawBarChart(data, options, element) {
     if (colors[0] == "") {
       bar.style.backgroundColor = randColor();
     } else {
-      bar.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+      bar.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
     }
     arr.push(element.append(bar));
   }
   return arr;
 };
 
-const randColor = () => {return "#" + Math.floor(Math.random() * 16777215).toString(16)};
+const randColor = () => { return "#" + Math.floor(Math.random() * 16777215).toString(16) };
 
 function makeTicks(str) {
   let li = document.createElement('li');
@@ -52,7 +52,7 @@ $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
   console.log(data)
-  let options = {height: '500', width: '100%', barMargin: '1px', colors: randColor()};
+  let options = { height: '500', width: '100%', barMargin: '1px', colors: randColor() };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
@@ -64,7 +64,7 @@ $(function () {
     let colors = $("input#colors").val().split(",");
     colors = colors.map(i => i.trim());
     console.log(colors[0] == "");
-    let options = {height: chartHeight, width: '100%', barMargin: barMargin, colors: colors};
+    let options = { height: chartHeight, width: '100%', barMargin: barMargin, colors: colors };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
       $(this).animate({ width: "100%" }, 6000);
