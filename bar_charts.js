@@ -22,7 +22,7 @@ function drawBarChart(data, options, element) {
     if (colors.length < 2) {
       bar.style.backgroundColor = randColor();
     } else {
-      bar.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      bar.style.backgroundColor = barColor(colors);
     }
     arr.push(element.append(bar));
   }
@@ -40,6 +40,20 @@ const randColor = () => {
   }
 };
 console.log(usedColors)
+
+let counter = 0;
+const barColor = (colors) => {
+  if (counter !== colors.length) {
+    let newColor = colors[counter];
+    counter++;
+    return newColor;
+  } else {
+    counter = 0;
+    newColor = colors[counter];
+    counter++;
+    return newColor;
+  }
+}
 
 function makeTicks(str) {
   let li = document.createElement('li');
