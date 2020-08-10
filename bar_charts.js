@@ -1,4 +1,3 @@
-
 function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = parseInt(options.height);
@@ -10,7 +9,7 @@ function drawBarChart(data, options, element) {
   let h1 = Math.max(...data) * 1.1;
   let colors = options.colors;
   let top = document.getElementById("top");
-  top.innerText = "MaxValue:" + String((h1 * 1.1).toFixed());
+  top.innerText = String((h1 * 1.1).toFixed());
   let arr = [];
   $("h3#x_axis").text(options.x_axis_label);
   $("h3#y_axis").text(options.y_axis_label);
@@ -40,7 +39,6 @@ const randColor = () => {
     return newColor;
   }
 };
-console.log(usedColors)
 
 let counter = 0;
 const barColor = (colors) => {
@@ -66,7 +64,7 @@ function makeRandArr(num) {
   let arr1 = [];
   let i = 0;
   while (i < num) {
-    randNum = (Math.random() * 5).toFixed(2);
+    randNum = Math.ceil(Math.random() * 10);
     arr1.push(randNum)
     i++;
   }
