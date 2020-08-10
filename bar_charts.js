@@ -109,9 +109,6 @@ $(function () {
 
 $(document).ready(function() {
   $("div.bar").on("mouseenter", function() {
-    $(this).css("background-color", "#aaa");
-  });
-  $("div.bar").on("mouseleave", function() {
     $(this).css("background-color", randColor());
   })
 })
