@@ -34,44 +34,46 @@
     <p class="valueInput">Enter values for your bars, separated by commas: <input type="text" id="array"
         onfocus="this.value=''" value="1, 2, 3, 4, 5" name="array"></p>
     <div>
-      <p class="valueInput">If you do not want the default chart settings, you can specify your own below (any field not
-        changed will use default):</p>
-      <ul id="optionsUl">
-        <li><label>Chart Height (in px):
-            <input type="text" id="chartHeight" value="500" onfocus="this.value=''" name="chartHeight">
-          </label>
-        </li>
-        <li>
-          <label>If you want to choose specific colors for bars, enter the colors here:
-            <input type="text" name="colors" id="colors" value="" onfocus="this.value=''" name="colors">
-          </label>
-          </iv>
-        <li>
-          <label>Bar spacing (space between bars in px):
-            <input type="text" id="barMargin" value="1px" onfocus="this.value=''" name="barMargin">
-          </label>
-        </li>
-        <li>
-          <label>Color of data point:
-            <input type="text" id="dataColor" value="black" onfocus="this.value=''" name="dataColor">
-          </label>
-        </li>
-        <li>
-          <label>X-Axis Label:
-            <input type="text" id="x_axis" value="x-axis" onfocus="this.value=''" name="x_axis">
-          </label>
-        </li>
-        <li>
-          <label>Y-Axis Label:
-            <input type="text" id="y_axis" value="y-axis" onfocus="this.value=''" name="y_axis">
-          </label>
-        </li>
-        <li>
-          <label>Bar Chart Title:
-            <input type="text" id="barChartTitle" value="My Bar Chart" onfocus="this.value=''" name="barChartTitle">
-          </label>
-        </li>
-      </ul>
+      <div class="valueInput">If you do not want the default chart settings, you can specify your own below (any field
+        not
+        changed will use default):
+        <ul id="optionsUl">
+          <li><label>Chart Height (in px):
+              <input type="text" id="chartHeight" value="500" onfocus="this.value=''" name="chartHeight">
+            </label>
+          </li>
+          <li>
+            <label>If you want to choose specific colors for bars, enter the colors here:
+              <input type="text" name="colors" id="colors" value="" onfocus="this.value=''" name="colors">
+            </label>
+            </iv>
+          <li>
+            <label>Bar spacing (space between bars in px):
+              <input type="text" id="barMargin" value="1px" onfocus="this.value=''" name="barMargin">
+            </label>
+          </li>
+          <li>
+            <label>Color of data point:
+              <input type="text" id="dataColor" value="black" onfocus="this.value=''" name="dataColor">
+            </label>
+          </li>
+          <li>
+            <label>X-Axis Label:
+              <input type="text" id="x_axis" value="x-axis" onfocus="this.value=''" name="x_axis">
+            </label>
+          </li>
+          <li>
+            <label>Y-Axis Label:
+              <input type="text" id="y_axis" value="y-axis" onfocus="this.value=''" name="y_axis">
+            </label>
+          </li>
+          <li>
+            <label>Bar Chart Title:
+              <input type="text" id="barChartTitle" value="My Bar Chart" onfocus="this.value=''" name="barChartTitle">
+            </label>
+          </li>
+        </ul>
+      </div>
     </div>
     <button id="btn1">submit your values</button>
   </div>
