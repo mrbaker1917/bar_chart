@@ -130,8 +130,8 @@ a:hover {
     transform: rotate(270deg);
     transform-origin: 0 0;
     position: relative;
-    bottom: 150px;
-    left: 0px;
+    bottom: 45%;
+    left: 5px;
 }
 
 .x-axis {
