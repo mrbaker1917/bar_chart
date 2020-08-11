@@ -5,8 +5,12 @@ function drawBarChart(data, options, element) {
   const ticks = document.getElementById('ticks');
   let ticksHeight = parseInt(chartHeight / 15);
   $("ul#ticks").html("<ul></ul>");
-  for (let i = 0; i < ticksHeight; i++) {
-    ticks.append(makeTicks("___"));
+  for (let i = ticksHeight; i > 0; i--) {
+    if (i % 5 == 0) {
+      ticks.append((String(i) + "__"));
+    } else {
+      ticks.append(makeTicks("___"));
+    }
   };
   $("div.container").css("height", chartHeight);
   $("div.y-axis").css("height", chartHeight);
