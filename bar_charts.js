@@ -6,6 +6,9 @@ function drawBarChart(data, options, element) {
   element.innerHTML = "";
   element.style.color = options.dataColor;
   $(".title_head").text(options.barChartTitle);
+  let titleFontSize = options.titleFontSize + "px";
+  $(".title_head").css("font-size", titleFontSize);
+  $(".title_head").css("color", options.titleColor);
   let h1 = Math.max(...data) * 1.1;
   let colors = options.colors;
   let top = document.getElementById("top");
@@ -93,6 +96,8 @@ $(function () {
     let dataColor = $("input#dataColor").val();
     let barChartTitle = $("input#barChartTitle").val();
     let dataPosition = $("input[name=dataPosition]:checked").val();
+    let titleColor = $("input#titleColor").val();
+    let titleFontSize = $("input#titleFontSize").val();
     let options = {
       height: chartHeight,
       width: '100%',
@@ -102,7 +107,9 @@ $(function () {
       y_axis_label: y_axis_label,
       dataColor: dataColor,
       barChartTitle: barChartTitle,
-      dataPosition: dataPosition
+      dataPosition: dataPosition,
+      titleColor: titleColor,
+      titleFontSize: titleFontSize
     };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
