@@ -4,6 +4,7 @@ function drawBarChart(data, options, element) {
   element.style.height = chartHeight;
   const ticks = document.getElementById('ticks');
   let ticksHeight = parseInt(chartHeight / 15);
+  $("ul#ticks").html("<ul></ul>");
   for (let i = 0; i < ticksHeight; i++) {
     ticks.append(makeTicks("___"));
   };
