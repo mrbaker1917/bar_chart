@@ -1,9 +1,9 @@
 function drawBarChart(data, options, element) {
-  element = document.getElementById("barchart");
+  element = $("div#barchart");
   let chartHeight = parseInt(options.height);
-  element.style.height = chartHeight;
+  element.css("height", chartHeight);
   let h1 = Math.max(...data) * 1.1;
-  const ticks = document.getElementById('ticks');
+  let ticks = $("ul#ticks");
   let ticksHeight = parseInt(chartHeight / 15);
   $("ul#ticks").html("<ul></ul>");
   for (let i = ticksHeight-1; i > 0; i--) {
@@ -16,16 +16,13 @@ function drawBarChart(data, options, element) {
   $("div.container").css("height", chartHeight);
   $("div.y-axis").css("height", chartHeight);
   let barMargin = options.barMargin;
-  element.innerHTML = "";
-  element.style.color = options.dataColor;
+  element.html("");
+  element.css("color", options.dataColor);
   $(".title_head").text(options.barChartTitle);
   let titleFontSize = options.titleFontSize + "px";
   $(".title_head").css("font-size", titleFontSize);
   $(".title_head").css("color", options.titleColor);
-
   let colors = options.colors;
-  let top = document.getElementById("top");
-  top.innerText = String((h1 * 1.1).toFixed());
   let arr = [];
   $("h3#x_axis").text(options.x_axis_label);
   $("h3#y_axis").text(options.y_axis_label);
