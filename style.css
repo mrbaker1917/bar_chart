@@ -98,7 +98,7 @@ a:hover {
 
 .container {
     border: 1px solid white;
-    height: 501px;
+    height: 500px;
     display: flex;
     align-items: flex-end;
     margin: 15px 10px 0px 15px;
@@ -122,7 +122,8 @@ a:hover {
 .y-axis {
     border-right: 1px solid beige;
     padding: 0 15px 0 0;
-    display: inline;
+    display: inline-block;
+    height: 500px;
 }
 
 .rotate {
