@@ -2,6 +2,11 @@ function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = parseInt(options.height);
   element.style.height = chartHeight;
+  const ticks = document.getElementById('ticks');
+  let ticksHeight = parseInt(chartHeight / 15);
+  for (let i = 0; i < ticksHeight; i++) {
+    ticks.append(makeTicks("___"));
+  };
   $("div.container").css("height", chartHeight);
   $("div.y-axis").css("height", chartHeight);
   let barMargin = options.barMargin;
