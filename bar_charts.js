@@ -2,12 +2,13 @@ function drawBarChart(data, options, element) {
   element = document.getElementById("barchart");
   let chartHeight = parseInt(options.height);
   element.style.height = chartHeight;
+  let h1 = Math.max(...data) * 1.1;
   const ticks = document.getElementById('ticks');
   let ticksHeight = parseInt(chartHeight / 15);
   $("ul#ticks").html("<ul></ul>");
-  for (let i = ticksHeight; i > 0; i--) {
+  for (let i = ticksHeight-1; i > 0; i--) {
     if (i % 5 == 0) {
-      ticks.append((String(i) + "__"));
+      ticks.append((String((i/Math.max(...data)*0.8).toFixed(1)) + "__"));
     } else {
       ticks.append(makeTicks("___"));
     }
@@ -21,7 +22,7 @@ function drawBarChart(data, options, element) {
   let titleFontSize = options.titleFontSize + "px";
   $(".title_head").css("font-size", titleFontSize);
   $(".title_head").css("color", options.titleColor);
-  let h1 = Math.max(...data) * 1.1;
+
   let colors = options.colors;
   let top = document.getElementById("top");
   top.innerText = String((h1 * 1.1).toFixed());
