@@ -18,6 +18,7 @@ function drawBarChart(data, options, element) {
     let bar = document.createElement('div');
     bar.style.height = h;
     bar.style.marginRight = barMargin;
+    bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + i + "</h6>";
     if (colors.length < 2) {
@@ -91,6 +92,7 @@ $(function () {
     let y_axis_label = $("input#y_axis").val();
     let dataColor = $("input#dataColor").val();
     let barChartTitle = $("input#barChartTitle").val();
+    let dataPosition = $("input[name=dataPosition]:checked").val();
     let options = {
       height: chartHeight,
       width: '100%',
@@ -99,7 +101,8 @@ $(function () {
       x_axis_label: x_axis_label,
       y_axis_label: y_axis_label,
       dataColor: dataColor,
-      barChartTitle: barChartTitle
+      barChartTitle: barChartTitle,
+      dataPosition: dataPosition
     };
     drawBarChart(data, options);
     $("div.bar").slideDown(3000, function () {
