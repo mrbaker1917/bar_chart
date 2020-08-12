@@ -6,9 +6,9 @@ function drawBarChart(data, options, element) {
   let ticks = $("ul#ticks");
   let ticksHeight = parseInt(chartHeight / 15);
   $("ul#ticks").html("<ul></ul>");
-  for (let i = ticksHeight-1; i > 0; i--) {
+  for (let i = ticksHeight - 1; i > 0; i--) {
     if (i % 5 == 0) {
-      ticks.append((String((i/(chartHeight/(500/33))*Math.max(...data)*1.1).toFixed(1)) + "__"));
+      ticks.append((String((i / (chartHeight / (500 / 33)) * Math.max(...data) * 1.1).toFixed(1)) + "__"));
     } else {
       ticks.append(makeTicks("___"));
     }
@@ -50,8 +50,8 @@ const randColor = () => {
   while (usedColors.indexOf(newColor) != -1) {
     newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
-    usedColors.push(newColor);
-    return newColor;
+  usedColors.push(newColor);
+  return newColor;
 };
 console.log(usedColors)
 
@@ -127,8 +127,8 @@ $(function () {
   })
 });
 
-$(document).ready(function() {
-  $("div.bar").on("mouseenter", function() {
+$(document).ready(function () {
+  $("div.bar").on("mouseenter", function () {
     $(this).css("background-color", randColor());
   })
 })
