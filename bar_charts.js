@@ -5,7 +5,7 @@ function drawBarChart(data, options, element) {
   let h1 = Math.max(...data) * 1.1;
   let ticks = $("ul#ticks");
   let ticksHeight = parseInt(chartHeight / 15);
-  $("ul#ticks").html("<ul></ul>");
+  ticks.html("<ul></ul>");
   for (let i = ticksHeight - 1; i > 0; i--) {
     if (i % 5 == 0) {
       ticks.append((String((i / (chartHeight / (500 / 33)) * Math.max(...data) * 1.1).toFixed(1)) + "__"));
