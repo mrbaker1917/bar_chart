@@ -18,14 +18,14 @@ function drawBarChart(data, options, element) {
   let barMargin = options.barMargin;
   element.html("");
   element.css("color", options.dataColor);
-  $(".title_head").text(options.barChartTitle);
+  let titleHead = $("h1.title_head");
+  titleHead.text(options.barChartTitle);
   let titleFontSize = options.titleFontSize + "px";
-  $(".title_head").css("font-size", titleFontSize);
-  $(".title_head").css("color", options.titleColor);
-  let colors = options.colors;
-  let arr = [];
+  titleHead.css({ "font-size": titleFontSize, "color": options.titleColor });
   $("h3#x_axis").text(options.x_axis_label);
   $("h3#y_axis").text(options.y_axis_label);
+  let colors = options.colors;
+  let arr = [];
   for (let i of data) {
     let h = String((i / h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
