@@ -86,7 +86,6 @@ function makeRandArr(num) {
   return arr1;
 }
 
-
 $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
