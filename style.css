@@ -158,6 +158,9 @@ h6 {
 #array {
     width: 50%;
 }
+#labels {
+  width: 30%;
+}
 
 .radio {
     border: 1px dotted white;
