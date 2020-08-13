@@ -1,5 +1,7 @@
 function drawBarChart(data, options, element) {
   element = $("div#barchart");
+  let barLab = $("div#labelsPos");
+  let barLabels = options.barLabels;
   let chartHeight = parseInt(options.height);
   element.css("height", chartHeight);
   let h1 = Math.max(...data) * 1.1;
@@ -26,21 +28,29 @@ function drawBarChart(data, options, element) {
   $("h3#y_axis").text(options.y_axis_label);
   let colors = options.colors;
   let arr = [];
-  for (let i of data) {
-    let h = String((i / h1 * chartHeight)) + "px";
+  for (let i = 0; i < data.length; i++) {
+    let h = String((data[i]/ h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
+    let barLabel = document.createElement('div');
+    barLabel.style.marginRight = barMargin;
+    barLabel.className = "barLabel";
+    if (barLabels.length > 0) {
+      barLabel.innerHTML = "<h6>" + barLabels[i] + "</h6>";
+    };
     bar.style.height = h;
     bar.style.marginRight = barMargin;
     bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
-    bar.innerHTML = "<h6>" + i + "</h6>";
+    bar.innerHTML = "<h6>" + i + "</h6>" + "<br/>" + "<h5>" + barLabels[i] + "</h5>";
     if (colors.length < 2) {
       bar.style.backgroundColor = randColor();
     } else {
       bar.style.backgroundColor = barColor(colors);
     }
     arr.push(element.append(bar));
+    arr.push(barLab.append(barLabel));
   }
+  console.log(arr)
   return arr;
 };
 
@@ -89,7 +99,7 @@ function makeRandArr(num) {
 $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(20);
-  let options = { height: '500', width: '100%', barMargin: '2px', colors: [] };
+  let options = { barLabels: [], height: '500', width: '100%', barMargin: '2px', colors: [] };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
@@ -107,7 +117,11 @@ $(function () {
     let dataPosition = $("input[name=dataPosition]:checked").val();
     let titleColor = $("input#titleColor").val();
     let titleFontSize = $("input#titleFontSize").val();
+    let labels = $("input#labels").val().split(",");
+    labels = labels.map(lb => lb.trim());
+    console.log(labels);
     let options = {
+      barLabels: labels,
       height: chartHeight,
       width: '100%',
       barMargin: barMargin,
