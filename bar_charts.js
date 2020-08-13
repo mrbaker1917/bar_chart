@@ -121,7 +121,7 @@ $(function () {
       titleFontSize: titleFontSize
     };
     drawBarChart(data, options);
-    $("div.bar").slideDown(3000, function () {
+    $("div.bar").slideDown(1000, function () {
       $(this).animate({ width: "100%" }, 6000);
     })
   })
@@ -131,4 +131,4 @@ $(document).ready(function () {
   $("div.bar").on("mouseenter", function () {
     $(this).css("background-color", randColor());
   })
-})
+});
