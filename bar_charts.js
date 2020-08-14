@@ -18,6 +18,7 @@ function drawBarChart(data, options, element) {
   $("div.y-axis").css("height", chartHeight);
   let barMargin = options.barMargin;
   element.html("");
+  barLab.html("");
   element.css("color", options.dataColor);
   let titleHead = $("h1.title_head");
   titleHead.text(options.barChartTitle);
@@ -32,17 +33,23 @@ function drawBarChart(data, options, element) {
     let bar = document.createElement('div');
     let barLabel = document.createElement('div');
     barLabel.className = "barLabel";
+    barLabel.style.marginRight = barMargin;
+    barLabel.style.alignItems = "flex-end";
     bar.style.height = h;
     bar.style.marginRight = barMargin;
     bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + data[i] + "</h6>";
+    barLabel.innerHTML = "<h6>" + barLabels[i] + "</h6>";
     if (colors.length < 2) {
       bar.style.backgroundColor = randColor();
+      barLabel.style.backgroundColor = randColor();
     } else {
       bar.style.backgroundColor = barColor(colors);
+      barLabel.style.backgroundColor = barColor(colors);
     }
     arr.push(element.append(bar));
+    arr.push(barLab.append(barLabel));
   }
   return arr;
 };
@@ -91,8 +98,8 @@ function makeRandArr(num) {
 
 $(function () {
   $("h1").fadeIn(3000);
-  let data = makeRandArr(20);
-  let options = { height: '500', width: '100%', barMargin: '2px', colors: [] };
+  let data = makeRandArr(10);
+  let options = { barLabels: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], height: '500', width: '100%', barMargin: '2px', colors: [] };
   drawBarChart(data, options);
   $("div.bar").slideDown(3000, function () {
     $(this).animate({ width: "100%" }, 6000);
