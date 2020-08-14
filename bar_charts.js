@@ -107,6 +107,9 @@ $(function () {
     let dataPosition = $("input[name=dataPosition]:checked").val();
     let titleColor = $("input#titleColor").val();
     let titleFontSize = $("input#titleFontSize").val();
+    let barLabels = $("input#labels").val().split(",");
+    barLabels = barLabels.map(lb => lb.trim());
+    console.log(barLabels);
     let options = {
       height: chartHeight,
       width: '100%',
