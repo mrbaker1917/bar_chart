@@ -111,6 +111,7 @@ $(function () {
     barLabels = barLabels.map(lb => lb.trim());
     console.log(barLabels);
     let options = {
+      barLabels: barLabels,
       height: chartHeight,
       width: '100%',
       barMargin: barMargin,
