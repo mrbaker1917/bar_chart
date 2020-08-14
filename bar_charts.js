@@ -26,14 +26,14 @@ function drawBarChart(data, options, element) {
   $("h3#y_axis").text(options.y_axis_label);
   let colors = options.colors;
   let arr = [];
-  for (let i of data) {
-    let h = String((i / h1 * chartHeight)) + "px";
+  for (let i = 0; i < data.length; i++) {
+    let h = String((data[i] / h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
     bar.style.height = h;
     bar.style.marginRight = barMargin;
     bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
-    bar.innerHTML = "<h6>" + i + "</h6>";
+    bar.innerHTML = "<h6>" + data[i] + "</h6>";
     if (colors.length < 2) {
       bar.style.backgroundColor = randColor();
     } else {
