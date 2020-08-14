@@ -30,6 +30,8 @@ function drawBarChart(data, options, element) {
   for (let i = 0; i < data.length; i++) {
     let h = String((data[i] / h1 * chartHeight)) + "px";
     let bar = document.createElement('div');
+    let barLabel = document.createElement('div');
+    barLabel.className = "barLabel";
     bar.style.height = h;
     bar.style.marginRight = barMargin;
     bar.style.alignItems = options.dataPosition;

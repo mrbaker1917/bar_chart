@@ -20,6 +20,17 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+.barLabel {
+    padding: 2px;
+    margin-right: 1px;
+    border: 1px solid beige;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 h3 {
     text-align: center;
