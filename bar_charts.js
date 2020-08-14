@@ -1,5 +1,6 @@
 function drawBarChart(data, options, element) {
   element = $("div#barchart");
+  let barLab = $("div#labelsPos");
   let chartHeight = parseInt(options.height);
   element.css("height", chartHeight);
   let h1 = Math.max(...data) * 1.1;
