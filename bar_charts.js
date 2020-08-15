@@ -22,7 +22,9 @@ function drawBarChart(data, options, element) {
   barLab.html("");
   element.css("color", options.dataColor);
   let titleHead = $("h1.title_head");
-  titleHead.text(options.barChartTitle);
+  if (options.barChartTitle != "") {
+    titleHead.text(options.barChartTitle);
+  }
   let titleFontSize = options.titleFontSize + "px";
   titleHead.css({ "font-size": titleFontSize, "color": options.titleColor });
   $("h3#x_axis").text(options.x_axis_label);
@@ -142,4 +144,10 @@ $(function () {
       $(this).animate({ width: "50%" }, 6000);
     })
   })
+});
+
+$(function () {
+  $("input#dynamicTitleChange").keyup(function () {
+    $("h1.title_head").text($(this).val());
+  });
 });
