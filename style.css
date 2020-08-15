@@ -13,6 +13,7 @@ body {
     padding: 2px;
     margin-right: 1px;
     border: 1px solid beige;
+    border-bottom: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     font-family: monospace;
@@ -24,6 +25,7 @@ body {
     padding: 2px;
     margin-right: 1px;
     border: 1px solid beige;
+    border-top: none;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     font-family: monospace;
@@ -32,7 +34,6 @@ body {
     align-items: flex-start;
     color: beige;
     padding: 5px;
-    font-size: 1.5em;
 }
 
 h3 {
@@ -129,7 +130,6 @@ a:hover {
   display: flex;
   align-items: flex-end;
   width: 97;
-  /* border: 1px solid white; */
 }
 
 #valsForm {

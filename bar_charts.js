@@ -60,7 +60,7 @@ function drawBarChart(data, options, element) {
 const usedColors = [];
 const randColor = () => {
   let newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  while (usedColors.indexOf(newColor) != -1) {
+  while (usedColors.indexOf(newColor) != -1 || newColor.length != 7) {
     newColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
   usedColors.push(newColor);
@@ -143,9 +143,3 @@ $(function () {
     })
   })
 });
-
-// $(document).ready(function () {
-//   $("div.bar").on("mouseenter", function () {
-//     $(this).css("background-color", randColor());
-//   })
-// });
