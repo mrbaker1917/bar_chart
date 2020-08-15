@@ -72,6 +72,13 @@ h1 {
   color: beige;
   margin-left: 50px;
 }
+#titleInput {
+  border: 1px dotted white;
+  width: 25%;
+  margin: auto;
+  padding: 5px;
+  font-weight: bold;
+}
 
 input {
   font-family: monospace;
