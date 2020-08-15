@@ -1,6 +1,7 @@
 function drawBarChart(data, options, element) {
   element = $("div#barchart");
   let barLab = $("div#labelsPos");
+  let barLabels = options.barLabels;
   let chartHeight = parseInt(options.height);
   element.css("height", chartHeight);
   let h1 = Math.max(...data) * 1.1;
@@ -40,13 +41,15 @@ function drawBarChart(data, options, element) {
     bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + data[i] + "</h6>";
-    barLabel.innerHTML = "<h6>" + barLabels[i] + "</h6>";
+    barLabel.innerHTML = barLabels[i];
     if (colors.length < 2) {
-      bar.style.backgroundColor = randColor();
-      barLabel.style.backgroundColor = randColor();
+      let barcolor = randColor()
+      bar.style.backgroundColor = barcolor
+      barLabel.style.backgroundColor = barcolor;
     } else {
-      bar.style.backgroundColor = barColor(colors);
-      barLabel.style.backgroundColor = barColor(colors);
+      let barcolor = barColor(colors);
+      bar.style.backgroundColor = barcolor;
+      barLabel.style.backgroundColor = barcolor;
     }
     arr.push(element.append(bar));
     arr.push(barLab.append(barLabel));
@@ -99,10 +102,10 @@ function makeRandArr(num) {
 $(function () {
   $("h1").fadeIn(3000);
   let data = makeRandArr(10);
-  let options = { barLabels: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], height: '500', width: '100%', barMargin: '2px', colors: [] };
+  let options = { barLabels: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], height: '500', width: '50%', barMargin: '2px', colors: [] };
   drawBarChart(data, options);
-  $("div.bar").slideDown(3000, function () {
-    $(this).animate({ width: "100%" }, 6000);
+  $("div.bar, div.barLabel").slideDown(3000, function () {
+    $(this).animate({ width: "50%" }, 6000);
   });
   $("button#btn1").click(function () {
     let data = $("input#array").val().split(",");
@@ -123,7 +126,7 @@ $(function () {
     let options = {
       barLabels: barLabels,
       height: chartHeight,
-      width: '100%',
+      width: '50%',
       barMargin: barMargin,
       colors: colors,
       x_axis_label: x_axis_label,
@@ -135,8 +138,8 @@ $(function () {
       titleFontSize: titleFontSize
     };
     drawBarChart(data, options);
-    $("div.bar").slideDown(1000, function () {
-      $(this).animate({ width: "100%" }, 6000);
+    $("div.bar, div.barLabel").slideDown(1000, function () {
+      $(this).animate({ width: "50%" }, 6000);
     })
   })
 });
