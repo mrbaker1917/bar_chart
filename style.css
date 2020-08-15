@@ -78,6 +78,10 @@ h1 {
   margin: auto;
   padding: 5px;
   font-weight: bold;
+  text-align: center;
+}
+#dynamicTitleChange {
+    margin: 5px 0;
 }
 
 input {
