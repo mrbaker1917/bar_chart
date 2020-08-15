@@ -2,6 +2,7 @@ function drawBarChart(data, options, element) {
   element = $("div#barchart");
   let barLab = $("div#labelsPos");
   let barLabels = options.barLabels;
+  console.log(barLabels)
   let chartHeight = parseInt(options.height);
   element.css("height", chartHeight);
   let h1 = Math.max(...data) * 1.1;
@@ -43,7 +44,11 @@ function drawBarChart(data, options, element) {
     bar.style.alignItems = options.dataPosition;
     bar.className = "bar";
     bar.innerHTML = "<h6>" + data[i] + "</h6>";
-    barLabel.innerHTML = barLabels[i];
+    if (barLabels.length != 1) {
+      barLabel.innerHTML = barLabels[i];
+    } else {
+      barLabel.text = "label";
+    }
     if (colors.length < 2) {
       let barcolor = randColor()
       bar.style.backgroundColor = barcolor
