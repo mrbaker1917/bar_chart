@@ -74,7 +74,7 @@ h1 {
 #titleInput {
   border: 1px dotted white;
   width: 60%;
-  margin: auto;
+  margin: 10px auto;
   padding: 5px;
   font-weight: bold;
   text-align: center;
@@ -204,11 +204,13 @@ h6 {
   }
   #labelsPos {
     margin-left: 15%;
+    z-index: 5;
   }
 }
 
 @media only screen and (max-width: 425px) {
   #ticks {
     text-align: left;
+    margin-left: -20px;
   }
 }
