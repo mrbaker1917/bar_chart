@@ -8,8 +8,7 @@ Example Screenshots:
 ![screen shot for iPhone X](./images/barchart_iphone.png)
 ![screen shot for iMac](./images/barchart_iMac.png)
 
-List the API functions that you would expect a user to use:
-[jQuery] (https://api.jquery.com/)
+API: [jQuery] (https://api.jquery.com/)
 
 ## functions:
 The functions are contained in the file bar_charts.js.
